@@ -14,6 +14,6 @@ public class ReturnrateCalculator implements NetValueCalculator {
         Double valuePrev = netValueList.get(0).getValuePrev();
         valuePrev = valuePrev==null?netValueList.get(0).getValue():valuePrev;
 
-        return netValueList.get(netValueList.size()).getValue()/valuePrev-1;
+        return netValueList.get(netValueList.size()-1).getValue()/valuePrev-1;
     }
 }
